@@ -1,0 +1,35 @@
+#:kivy 1.7.2
+
+
+<SecondsIndicator>:
+    canvas:
+        Color: 
+            rgba: 1, 0, 0, 1
+
+        Ellipse:
+            size: (200, 200)
+            pos: (root.width / 2 - 100), (root.height / 2 - 100)            
+            angle_end: root.seconds_angle
+            segments: 60
+
+        Color: 
+            rgba: 0, 0, 0, 1
+
+        Ellipse:
+            size: (180, 180)
+            pos: (root.width / 2 - 90), (root.height / 2 - 90)
+            segments: 60
+
+
+<DigitalClock>:
+    SecondsIndicator:
+        id: seconds
+        width: 100
+        height: 100
+
+    Label:
+        id: label
+        text: self.parent.display_time
+        font_size: 50
+           
+
