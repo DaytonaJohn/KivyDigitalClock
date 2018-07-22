@@ -95,8 +95,6 @@ class DigitalClock(FloatLayout):
 class DigitalClockApp(App):
     def build(self):
         dc = DigitalClock()
-        dc.update()
-
         return dc
 
 
