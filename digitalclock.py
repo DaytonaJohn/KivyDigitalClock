@@ -59,7 +59,7 @@ class SecondsIndicator(Widget):
         seconds = current_time[5]
 
         self.seconds_angle = (360 / 60) * seconds
-        self.schedule_update();
+        self.schedule_update()
 
 
     def schedule_update(self):
@@ -74,6 +74,7 @@ class DigitalClock(FloatLayout):
 
     def __init__(self, **kwargs):
         super(DigitalClock, self).__init__(**kwargs)
+        self.update()
 
 
     def update(self, dt=0):
